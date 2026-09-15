@@ -13,7 +13,7 @@ class ValidationTests(unittest.TestCase):
         self.vendors, self.entities, self.departments = configuration()
         self.row = {"transaction_id": "TEST-1", "date": "2026-08-01", "employee": "Test User",
                     "vendor": "AWS", "amount": "100.00", "currency": "USD",
-                    "department": "Engineering", "entity": "Northstar Labs US",
+                    "department": "Engineering", "entity": "AK Labs US",
                     "receipt_attached": "yes", "memo": "Cloud usage", "approved": "yes"}
 
     def test_valid_record(self):
