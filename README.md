@@ -4,7 +4,7 @@
 
 ## Executive summary
 
-Northstar Labs, a fictional 75-person software company, needs a reliable process for transferring corporate-card transactions into its accounting system. This solution translates business requirements into GL, department, and entity mappings; validates transaction readiness; routes exceptions; and reconciles export totals before posting.
+AK Labs, a fictional 75-person software company, needs a reliable process for transferring corporate-card transactions into its accounting system. This solution translates business requirements into GL, department, and entity mappings; validates transaction readiness; routes exceptions; and reconciles export totals before posting.
 
 ## Customer outcomes
 
