@@ -2,7 +2,7 @@
 
 ## Customer profile
 
-Northstar Labs is a fictional 75-person software company with US and UK entities. Finance currently reviews corporate-card activity in spreadsheets before importing journals into its accounting system.
+AK Labs is a fictional 75-person software company with US and UK entities. Finance currently reviews corporate-card activity in spreadsheets before importing journals into its accounting system.
 
 ## Discovery questions
 
