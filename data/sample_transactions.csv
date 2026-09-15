@@ -1,21 +1,21 @@
 transaction_id,date,employee,vendor,amount,currency,department,entity,receipt_attached,memo,approved
-TXN-1001,2026-08-01,Maya Chen,AWS,842.19,USD,Engineering,Northstar Labs US,yes,August cloud usage,yes
-TXN-1002,2026-08-02,Liam Patel,Figma,180.00,USD,Design,Northstar Labs US,yes,Design licenses,yes
-TXN-1003,2026-08-03,Sofia Rivera,Delta Airlines,1248.35,USD,Sales,Northstar Labs US,yes,Customer onsite flight,yes
-TXN-1004,2026-08-04,Noah Williams,Uber,46.27,USD,Sales,Northstar Labs US,yes,Airport transportation,yes
-TXN-1005,2026-08-05,Emma Johnson,Amazon,129.44,USD,Operations,Northstar Labs US,no,Office supplies,yes
-TXN-1006,2026-08-06,Ethan Brown,GitHub,420.00,USD,Engineering,Northstar Labs US,yes,Developer licenses,yes
-TXN-1007,2026-08-07,Ava Davis,LinkedIn,799.00,USD,People,Northstar Labs US,yes,Recruiting subscription,yes
-TXN-1008,2026-08-08,Lucas Wilson,Hilton,936.80,USD,Sales,Northstar Labs US,yes,Customer onsite hotel,yes
-TXN-1009,2026-08-09,Mia Martinez,Chipotle,284.75,USD,People,Northstar Labs US,yes,Employee event catering,yes
-TXN-1010,2026-08-10,Oliver Taylor,Zoom,159.90,USD,Operations,Northstar Labs US,yes,Webinar subscription,yes
-TXN-1011,2026-08-11,Isabella Anderson,Staples,215.63,USD,Operations,Northstar Labs US,yes,,yes
-TXN-1012,2026-08-12,James Thomas,Unknown Vendor,76.40,USD,Engineering,Northstar Labs US,yes,Team adapter,yes
-TXN-1013,2026-08-13,Amelia Jackson,AWS,1186.22,USD,Engineering,Northstar Labs US,yes,Cloud usage over threshold,no
-TXN-1014,2026-08-14,Benjamin White,Kroger,168.90,USD,People,Northstar Labs US,yes,New-hire welcome event,yes
-TXN-1015,2026-08-15,Charlotte Harris,Uber,58.34,USD,Marketing,Northstar Labs US,yes,Conference transportation,yes
-TXN-1016,2026-08-16,Henry Martin,Figma,180.00,USD,Design,Northstar Labs Europe,yes,Design licenses,yes
-TXN-1017,2026-08-17,Evelyn Thompson,Amazon,412.18,USD,Operations,Northstar Labs US,yes,Office supplies,yes
-TXN-1018,2026-08-18,Alexander Garcia,Delta Airlines,1355.72,USD,Sales,Northstar Labs US,yes,Customer conference flight,yes
-TXN-1019,2026-08-19,Harper Martinez,GitHub,420.00,USD,Engineering,Northstar Labs US,yes,Developer licenses,yes
-TXN-1019,2026-08-19,Harper Martinez,GitHub,420.00,USD,Engineering,Northstar Labs US,yes,Duplicate source record,yes
+TXN-1001,2026-08-01,Maya Chen,AWS,842.19,USD,Engineering,AK Labs US,yes,August cloud usage,yes
+TXN-1002,2026-08-02,Liam Patel,Figma,180.00,USD,Design,AK Labs US,yes,Design licenses,yes
+TXN-1003,2026-08-03,Sofia Rivera,Delta Airlines,1248.35,USD,Sales,AK Labs US,yes,Customer onsite flight,yes
+TXN-1004,2026-08-04,Noah Williams,Uber,46.27,USD,Sales,AK Labs US,yes,Airport transportation,yes
+TXN-1005,2026-08-05,Emma Johnson,Amazon,129.44,USD,Operations,AK Labs US,no,Office supplies,yes
+TXN-1006,2026-08-06,Ethan Brown,GitHub,420.00,USD,Engineering,AK Labs US,yes,Developer licenses,yes
+TXN-1007,2026-08-07,Ava Davis,LinkedIn,799.00,USD,People,AK Labs US,yes,Recruiting subscription,yes
+TXN-1008,2026-08-08,Lucas Wilson,Hilton,936.80,USD,Sales,AK Labs US,yes,Customer onsite hotel,yes
+TXN-1009,2026-08-09,Mia Martinez,Chipotle,284.75,USD,People,AK Labs US,yes,Employee event catering,yes
+TXN-1010,2026-08-10,Oliver Taylor,Zoom,159.90,USD,Operations,AK Labs US,yes,Webinar subscription,yes
+TXN-1011,2026-08-11,Isabella Anderson,Staples,215.63,USD,Operations,AK Labs US,yes,,yes
+TXN-1012,2026-08-12,James Thomas,Unknown Vendor,76.40,USD,Engineering,AK Labs US,yes,Team adapter,yes
+TXN-1013,2026-08-13,Amelia Jackson,AWS,1186.22,USD,Engineering,AK Labs US,yes,Cloud usage over threshold,no
+TXN-1014,2026-08-14,Benjamin White,Kroger,168.90,USD,People,AK Labs US,yes,New-hire welcome event,yes
+TXN-1015,2026-08-15,Charlotte Harris,Uber,58.34,USD,Marketing,AK Labs US,yes,Conference transportation,yes
+TXN-1016,2026-08-16,Henry Martin,Figma,180.00,USD,Design,AK Labs Europe,yes,Design licenses,yes
+TXN-1017,2026-08-17,Evelyn Thompson,Amazon,412.18,USD,Operations,AK Labs US,yes,Office supplies,yes
+TXN-1018,2026-08-18,Alexander Garcia,Delta Airlines,1355.72,USD,Sales,AK Labs US,yes,Customer conference flight,yes
+TXN-1019,2026-08-19,Harper Martinez,GitHub,420.00,USD,Engineering,AK Labs US,yes,Developer licenses,yes
+TXN-1019,2026-08-19,Harper Martinez,GitHub,420.00,USD,Engineering,AK Labs US,yes,Duplicate source record,yes
