@@ -59,6 +59,4 @@ Generated files appear in `output/`: `ready_for_export.csv`, `exceptions.csv`, a
 - Tax, foreign exchange, refunds, and split allocations are out of scope.
 - Production use would require customer-approved mappings, sandbox testing, secure authentication, access controls, and audit logging.
 
-## Interview walkthrough
 
-Explain the customer problem and acceptance criteria, show how requirements become mappings, run the validator, trace one exception from diagnosis to resolution, and finish with reconciliation and go-live controls.
