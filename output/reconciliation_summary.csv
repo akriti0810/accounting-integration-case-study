@@ -1,0 +1,9 @@
+metric,value
+Source transaction count,20
+Source total,9540.09
+Eligible source total,6854.06
+Exception transaction total,2686.03
+Export debit total,6854.06
+Export credit total,6854.06
+Journal balance difference,0.00
+Source-to-export difference,0.00

@@ -1,0 +1,9 @@
+transaction_id,vendor,amount,issue_code,owner,recommended_action
+TXN-1005,Amazon,129.44,MISSING_RECEIPT,Cardholder,Attach a valid receipt
+TXN-1011,Staples,215.63,MISSING_MEMO,Cardholder,Add the business purpose
+TXN-1012,Unknown Vendor,76.40,UNMAPPED_VENDOR,Finance,Approve a GL mapping or correct vendor
+TXN-1013,AWS,1186.22,MISSING_APPROVAL,Manager,Review and record approval
+TXN-1015,Uber,58.34,INVALID_DEPARTMENT,Finance,Select an approved department
+TXN-1016,Figma,180.00,INVALID_ENTITY,Finance,Select an approved entity
+TXN-1019,GitHub,420.00,DUPLICATE_ID,Finance,Investigate source duplication
+TXN-1019,GitHub,420.00,DUPLICATE_ID,Finance,Investigate source duplication
