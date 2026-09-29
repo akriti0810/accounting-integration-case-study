@@ -17,7 +17,8 @@ AK Labs, a fictional 75-person software company, needs a reliable process for tr
 | Journal output | 24 balanced debit/credit lines |
 | Journal balance difference | $0.00 |
 | Source-to-export difference | $0.00 |
-| Automated controls tested | 4 passing tests |
+| QuickBooks payloads prepared | 12 balanced journal entries |
+| Automated controls tested | 8 passing tests |
 
 See the linked [results snapshot](docs/results_snapshot.md), [exception queue](output/exceptions.csv), [journal export](output/ready_for_export.csv), and [reconciliation summary](output/reconciliation_summary.csv).
 
@@ -35,7 +36,8 @@ See the linked [results snapshot](docs/results_snapshot.md), [exception queue](o
 | [Configuration](config) | Requirements translated into product configuration |
 | [Sample transactions](data/sample_transactions.csv) | Fictional corporate-card activity with valid and invalid cases |
 | [Validation workflow](src/validate_transactions.py) | Mapping, validation, exception routing, and reconciliation |
-| [Automated tests](tests/test_validation.py) | Automated control tests |
+| [QuickBooks sandbox connector](src/quickbooks_sandbox.py) | Account mapping, journal payload creation, posting, and read-back verification |
+| [Automated tests](tests) | Validation and QuickBooks connector control tests |
 | [Results snapshot](docs/results_snapshot.md) | Review-ready examples of generated outputs and control results |
 
 Supporting documentation in [docs/](docs) covers assumptions and requirements, test scenarios, operating guidance, and a go-live checklist.
@@ -44,7 +46,7 @@ Supporting documentation in [docs/](docs) covers assumptions and requirements, t
 
 ```text
 Card transactions → validation and mapping → ready records + exception queue
-                  → balanced journal export → Finance reconciliation and approval
+                  → balanced journal export → QuickBooks sandbox → read-back reconciliation
 ```
 
 ## Validation and accounting controls
@@ -62,14 +64,28 @@ Requires Python 3.9+ and only the standard library.
 
 ```bash
 python3 src/validate_transactions.py
+python3 src/quickbooks_sandbox.py
 python3 -m unittest discover -s tests -v
 ```
 
-Generated files appear in `output/`: `ready_for_export.csv`, `exceptions.csv`, and `reconciliation_summary.csv`.
+The QuickBooks command defaults to a credential-free payload preview. Generated files appear in `output/`: `ready_for_export.csv`, `exceptions.csv`, `reconciliation_summary.csv`, and `quickbooks_payload_preview.json`.
+
+## QuickBooks Online sandbox
+
+The connector is designed for a QuickBooks Online developer sandbox and uses the official Accounting API. It creates or reuses the configured chart-of-accounts records, posts one balanced journal entry per eligible source transaction, reads every entry back, and reconciles the sandbox totals to the validated source activity.
+
+Live posting requires a short-lived OAuth access token and sandbox company ID. Keep both out of source control. Follow the [sandbox runbook](docs/quickbooks_sandbox_runbook.md), then run:
+
+```bash
+python3 src/quickbooks_sandbox.py --post
+```
+
+After a successful live run, the script creates `output/quickbooks_sandbox_reconciliation.csv` as shareable verification. Raw API responses remain in a git-ignored private file.
 
 ## Limitations
 
-- CSV journal import represents the accounting system; there is no live API connection.
+- The connector targets a developer sandbox, not a production QuickBooks company.
+- A payload preview demonstrates sandbox readiness; live implementation is complete only after OAuth authorization, posting, and read-back verification succeed.
 - Tax, foreign exchange, refunds, and split allocations are out of scope.
 - Production use would require customer-approved mappings, sandbox testing, secure authentication, access controls, and audit logging.
 

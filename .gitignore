@@ -150,6 +150,7 @@ activemq-data/
 # Environments
 .env
 .envrc
+output/quickbooks_sandbox_private.json
 .venv
 env/
 venv/

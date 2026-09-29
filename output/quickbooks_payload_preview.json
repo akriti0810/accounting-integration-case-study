@@ -1,0 +1,338 @@
+[
+  {
+    "TxnDate": "2026-08-01",
+    "PrivateNote": "AK Labs sandbox import | TXN-1001",
+    "Line": [
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 842.19,
+        "Description": "August cloud usage | Department: Engineering | Source: TXN-1001",
+        "JournalEntryLineDetail": {
+          "PostingType": "Debit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_6100"
+          }
+        }
+      },
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 842.19,
+        "Description": "August cloud usage | Department: Engineering | Source: TXN-1001",
+        "JournalEntryLineDetail": {
+          "PostingType": "Credit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_2100"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "TxnDate": "2026-08-02",
+    "PrivateNote": "AK Labs sandbox import | TXN-1002",
+    "Line": [
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 180.0,
+        "Description": "Design licenses | Department: Design | Source: TXN-1002",
+        "JournalEntryLineDetail": {
+          "PostingType": "Debit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_6200"
+          }
+        }
+      },
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 180.0,
+        "Description": "Design licenses | Department: Design | Source: TXN-1002",
+        "JournalEntryLineDetail": {
+          "PostingType": "Credit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_2100"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "TxnDate": "2026-08-03",
+    "PrivateNote": "AK Labs sandbox import | TXN-1003",
+    "Line": [
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 1248.35,
+        "Description": "Customer onsite flight | Department: Sales | Source: TXN-1003",
+        "JournalEntryLineDetail": {
+          "PostingType": "Debit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_6600"
+          }
+        }
+      },
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 1248.35,
+        "Description": "Customer onsite flight | Department: Sales | Source: TXN-1003",
+        "JournalEntryLineDetail": {
+          "PostingType": "Credit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_2100"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "TxnDate": "2026-08-04",
+    "PrivateNote": "AK Labs sandbox import | TXN-1004",
+    "Line": [
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 46.27,
+        "Description": "Airport transportation | Department: Sales | Source: TXN-1004",
+        "JournalEntryLineDetail": {
+          "PostingType": "Debit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_6600"
+          }
+        }
+      },
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 46.27,
+        "Description": "Airport transportation | Department: Sales | Source: TXN-1004",
+        "JournalEntryLineDetail": {
+          "PostingType": "Credit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_2100"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "TxnDate": "2026-08-06",
+    "PrivateNote": "AK Labs sandbox import | TXN-1006",
+    "Line": [
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 420.0,
+        "Description": "Developer licenses | Department: Engineering | Source: TXN-1006",
+        "JournalEntryLineDetail": {
+          "PostingType": "Debit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_6200"
+          }
+        }
+      },
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 420.0,
+        "Description": "Developer licenses | Department: Engineering | Source: TXN-1006",
+        "JournalEntryLineDetail": {
+          "PostingType": "Credit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_2100"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "TxnDate": "2026-08-07",
+    "PrivateNote": "AK Labs sandbox import | TXN-1007",
+    "Line": [
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 799.0,
+        "Description": "Recruiting subscription | Department: People | Source: TXN-1007",
+        "JournalEntryLineDetail": {
+          "PostingType": "Debit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_6300"
+          }
+        }
+      },
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 799.0,
+        "Description": "Recruiting subscription | Department: People | Source: TXN-1007",
+        "JournalEntryLineDetail": {
+          "PostingType": "Credit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_2100"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "TxnDate": "2026-08-08",
+    "PrivateNote": "AK Labs sandbox import | TXN-1008",
+    "Line": [
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 936.8,
+        "Description": "Customer onsite hotel | Department: Sales | Source: TXN-1008",
+        "JournalEntryLineDetail": {
+          "PostingType": "Debit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_6600"
+          }
+        }
+      },
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 936.8,
+        "Description": "Customer onsite hotel | Department: Sales | Source: TXN-1008",
+        "JournalEntryLineDetail": {
+          "PostingType": "Credit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_2100"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "TxnDate": "2026-08-09",
+    "PrivateNote": "AK Labs sandbox import | TXN-1009",
+    "Line": [
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 284.75,
+        "Description": "Employee event catering | Department: People | Source: TXN-1009",
+        "JournalEntryLineDetail": {
+          "PostingType": "Debit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_6700"
+          }
+        }
+      },
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 284.75,
+        "Description": "Employee event catering | Department: People | Source: TXN-1009",
+        "JournalEntryLineDetail": {
+          "PostingType": "Credit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_2100"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "TxnDate": "2026-08-10",
+    "PrivateNote": "AK Labs sandbox import | TXN-1010",
+    "Line": [
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 159.9,
+        "Description": "Webinar subscription | Department: Operations | Source: TXN-1010",
+        "JournalEntryLineDetail": {
+          "PostingType": "Debit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_6200"
+          }
+        }
+      },
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 159.9,
+        "Description": "Webinar subscription | Department: Operations | Source: TXN-1010",
+        "JournalEntryLineDetail": {
+          "PostingType": "Credit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_2100"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "TxnDate": "2026-08-14",
+    "PrivateNote": "AK Labs sandbox import | TXN-1014",
+    "Line": [
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 168.9,
+        "Description": "New-hire welcome event | Department: People | Source: TXN-1014",
+        "JournalEntryLineDetail": {
+          "PostingType": "Debit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_6700"
+          }
+        }
+      },
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 168.9,
+        "Description": "New-hire welcome event | Department: People | Source: TXN-1014",
+        "JournalEntryLineDetail": {
+          "PostingType": "Credit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_2100"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "TxnDate": "2026-08-17",
+    "PrivateNote": "AK Labs sandbox import | TXN-1017",
+    "Line": [
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 412.18,
+        "Description": "Office supplies | Department: Operations | Source: TXN-1017",
+        "JournalEntryLineDetail": {
+          "PostingType": "Debit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_6500"
+          }
+        }
+      },
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 412.18,
+        "Description": "Office supplies | Department: Operations | Source: TXN-1017",
+        "JournalEntryLineDetail": {
+          "PostingType": "Credit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_2100"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "TxnDate": "2026-08-18",
+    "PrivateNote": "AK Labs sandbox import | TXN-1018",
+    "Line": [
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 1355.72,
+        "Description": "Customer conference flight | Department: Sales | Source: TXN-1018",
+        "JournalEntryLineDetail": {
+          "PostingType": "Debit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_6600"
+          }
+        }
+      },
+      {
+        "DetailType": "JournalEntryLineDetail",
+        "Amount": 1355.72,
+        "Description": "Customer conference flight | Department: Sales | Source: TXN-1018",
+        "JournalEntryLineDetail": {
+          "PostingType": "Credit",
+          "AccountRef": {
+            "value": "QBO_ACCOUNT_ID_2100"
+          }
+        }
+      }
+    ]
+  }
+]

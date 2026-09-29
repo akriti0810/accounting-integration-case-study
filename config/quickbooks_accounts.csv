@@ -1,0 +1,8 @@
+local_account,local_account_name,quickbooks_name,account_type
+2100,Corporate Card Payable,AK Labs Corporate Card,Credit Card
+6100,Cloud Infrastructure,AK Labs Cloud Infrastructure,Expense
+6200,Software Subscriptions,AK Labs Software Subscriptions,Expense
+6300,Recruiting,AK Labs Recruiting,Expense
+6500,Office Supplies,AK Labs Office Supplies,Expense
+6600,Travel,AK Labs Travel,Expense
+6700,Meals and Entertainment,AK Labs Meals and Entertainment,Expense
