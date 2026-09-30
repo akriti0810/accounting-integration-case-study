@@ -1,0 +1,9 @@
+metric,value
+Environment,QuickBooks Online sandbox
+Journal entries created and read back,12
+Journal lines verified,24
+Verified debit total,6854.06
+Verified credit total,6854.06
+QuickBooks balance difference,0.00
+Expected eligible activity,6854.06
+Sandbox-to-source difference,0.00

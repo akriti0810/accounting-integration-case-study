@@ -6,7 +6,9 @@ written to disk.
 """
 
 import argparse
+import base64
 import csv
+import getpass
 import json
 import os
 import urllib.error
@@ -18,6 +20,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SANDBOX_BASE = "https://sandbox-quickbooks.api.intuit.com"
+TOKEN_URL = "https://oauth.platform.intuit.com/oauth2/v1/tokens/bearer"
+PLAYGROUND_REDIRECT_URI = "https://developer.intuit.com/v2/OAuth2Playground/RedirectUrl"
 
 
 def read_csv(path):
@@ -129,6 +133,31 @@ class QuickBooksSandbox:
         return self.request("GET", f"journalentry/{journal_id}")["JournalEntry"]
 
 
+def exchange_authorization_code(client_id, client_secret, authorization_code):
+    credentials = base64.b64encode(f"{client_id}:{client_secret}".encode("utf-8")).decode("ascii")
+    body = urllib.parse.urlencode({
+        "grant_type": "authorization_code",
+        "code": authorization_code,
+        "redirect_uri": PLAYGROUND_REDIRECT_URI,
+    }).encode("utf-8")
+    request = urllib.request.Request(
+        TOKEN_URL,
+        data=body,
+        method="POST",
+        headers={
+            "Authorization": f"Basic {credentials}",
+            "Accept": "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            return json.loads(response.read().decode("utf-8"))["access_token"]
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"QuickBooks OAuth returned HTTP {exc.code}: {detail}") from exc
+
+
 def summarize_posted_journals(journals):
     debit = Decimal("0")
     credit = Decimal("0")
@@ -174,11 +203,16 @@ def write_live_evidence(journals, account_actions):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--post", action="store_true", help="Create and verify journals in a QuickBooks Online sandbox")
+    parser.add_argument(
+        "--oauth",
+        action="store_true",
+        help="Prompt securely for an authorization code, exchange it in memory, then post",
+    )
     args = parser.parse_args()
 
     configuration = account_configuration()
     grouped = grouped_journal_lines()
-    if not args.post:
+    if not args.post and not args.oauth:
         placeholder_ids = {account: f"QBO_ACCOUNT_ID_{account}" for account in configuration}
         payloads = [build_journal_payload(transaction_id, lines, placeholder_ids)
                     for transaction_id, lines in sorted(grouped.items())]
@@ -186,8 +220,15 @@ def main():
         print(f"Prepared {len(payloads)} QuickBooks sandbox journal payloads at {path}")
         return
 
-    access_token = os.environ.get("QBO_ACCESS_TOKEN")
-    realm_id = os.environ.get("QBO_REALM_ID")
+    if args.oauth:
+        client_id = getpass.getpass("Client ID (hidden): ")
+        client_secret = getpass.getpass("Client secret (hidden): ")
+        authorization_code = getpass.getpass("Authorization code (hidden): ")
+        realm_id = getpass.getpass("Realm ID (hidden): ")
+        access_token = exchange_authorization_code(client_id, client_secret, authorization_code)
+    else:
+        access_token = os.environ.get("QBO_ACCESS_TOKEN")
+        realm_id = os.environ.get("QBO_REALM_ID")
     if not access_token or not realm_id:
         raise SystemExit("Set QBO_ACCESS_TOKEN and QBO_REALM_ID before using --post")
 

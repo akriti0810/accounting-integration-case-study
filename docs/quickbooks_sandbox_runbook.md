@@ -17,17 +17,19 @@ Verify that the validated AK Labs journal output can be configured, posted, retr
 2. Create or select an app with the QuickBooks Online Accounting scope.
 3. Connect the app to a developer sandbox through Intuit's OAuth 2.0 Playground.
 4. Obtain a short-lived access token and the sandbox company ID (`realmId`).
-5. Store them only for the current local session as `QBO_ACCESS_TOKEN` and `QBO_REALM_ID`. Never paste them into repository files, screenshots, issues, or commits.
+5. Either store the access token and company ID only for the current local session, or use the connector's secure interactive OAuth mode. Never paste credentials into repository files, screenshots, issues, or commits.
 
 ## Post and verify
 
-Run `python3 src/quickbooks_sandbox.py --post`. The connector will:
+Run either `python3 src/quickbooks_sandbox.py --post` with temporary environment variables or `python3 src/quickbooks_sandbox.py --oauth` for hidden interactive prompts. The connector will:
 
 1. Read the sandbox chart of accounts.
 2. Create or reuse the seven AK Labs accounts.
 3. Post 12 balanced journal entries from the eligible transaction set.
 4. Retrieve each journal entry from QuickBooks.
 5. Verify 24 lines, $6,854.06 in debits, $6,854.06 in credits, a $0.00 journal imbalance, and a $0.00 sandbox-to-source difference.
+
+The verified run completed all five steps successfully. Its shareable results are recorded in `output/quickbooks_sandbox_reconciliation.csv`.
 
 ## Evidence and security
 

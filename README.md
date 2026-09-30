@@ -17,10 +17,11 @@ AK Labs, a fictional 75-person software company, needs a reliable process for tr
 | Journal output | 24 balanced debit/credit lines |
 | Journal balance difference | $0.00 |
 | Source-to-export difference | $0.00 |
-| QuickBooks payloads prepared | 12 balanced journal entries |
+| QuickBooks sandbox journals created and read back | 12 entries / 24 lines |
+| QuickBooks sandbox reconciliation difference | $0.00 |
 | Automated controls tested | 8 passing tests |
 
-See the linked [results snapshot](docs/results_snapshot.md), [exception queue](output/exceptions.csv), [journal export](output/ready_for_export.csv), and [reconciliation summary](output/reconciliation_summary.csv).
+See the linked [results snapshot](docs/results_snapshot.md), [exception queue](output/exceptions.csv), [journal export](output/ready_for_export.csv), [source reconciliation](output/reconciliation_summary.csv), and [QuickBooks sandbox reconciliation](output/quickbooks_sandbox_reconciliation.csv).
 
 ## Design goals
 
@@ -80,12 +81,14 @@ Live posting requires a short-lived OAuth access token and sandbox company ID. K
 python3 src/quickbooks_sandbox.py --post
 ```
 
-After a successful live run, the script creates `output/quickbooks_sandbox_reconciliation.csv` as shareable verification. Raw API responses remain in a git-ignored private file.
+For a one-time local run without storing an access token, use `python3 src/quickbooks_sandbox.py --oauth`; all credential prompts are hidden and the exchanged token remains in memory only.
+
+The completed sandbox run created `output/quickbooks_sandbox_reconciliation.csv` as shareable verification: 12 journal entries and 24 lines were created, retrieved from QuickBooks, and reconciled to $6,854.06 with a $0.00 difference. Raw API responses remain in a git-ignored private file.
 
 ## Limitations
 
 - The connector targets a developer sandbox, not a production QuickBooks company.
-- A payload preview demonstrates sandbox readiness; live implementation is complete only after OAuth authorization, posting, and read-back verification succeed.
+- The verified implementation demonstrates OAuth authorization, account configuration, journal posting, and read-back in a fictional developer sandbox; it is not professional client deployment experience.
 - Tax, foreign exchange, refunds, and split allocations are out of scope.
 - Production use would require customer-approved mappings, sandbox testing, secure authentication, access controls, and audit logging.
 
